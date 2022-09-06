@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all.order("created_at DESC")
+    @users = User.all.order("name")
   end
 
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.new(user_params)
 
@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @abc = Somatic.where(user_id: @user.id)
   end
 
   def edit
@@ -30,6 +31,12 @@ class UsersController < ApplicationController
   def destory
   end
 
-  private
+  def search
+    @users = User.search(params[:keyword])
+  end
 
+  private
+  def user_params
+    params.require(:user).permit(:name, :kana, :gender_id, :phone_number, :postal_code, :prefecture_id, :city, :street, :building, :know_id, :email, :birthday, :text, :image)
+  end
 end

@@ -5,11 +5,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user_id: @user.id)
   end
 
-  # def new
-  #   @booking = Booking.new
-  #   @aaa = 
-  # end
-
   def create
     @booking = Booking.new(booking_params)
     @user = @booking.user
@@ -23,11 +18,13 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @user = User.find(params[:user_id])
+    @bookings = Booking.where(user_id: @user.id)
   end
 
   def edit
     @booking = Booking.find(params[:id])
     @user = User.find(params[:user_id])
+    @bookings = Booking.where(user_id: @user.id)
   end
 
   def update
