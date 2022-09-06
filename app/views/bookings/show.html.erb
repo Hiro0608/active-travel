@@ -1,0 +1,8 @@
+
+<%= @booking.price%>
+<%= @booking.text%>
+<%= @booking.start_time.strftime('%Y/%m/%d')%>
+
+<a href = "/users/<%=@user.id%>/bookings/<%=@booking.id%>/edit">編集</a>
+<%= link_to "削除",user_booking_path(@booking.id), method: :delete, data: {confirm:"削除しますか？"}%>
+<%= link_to "戻る" %>

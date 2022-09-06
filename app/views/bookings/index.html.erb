@@ -1,0 +1,15 @@
+<%= render partial: "booking"%>
+<%= month_calendar events:@bookings  do |date, events| %>
+  <%= date.day %>
+  <% events.each do |event| %>
+    <div>
+    <a href="/users/<%=@user.id%>/bookings/<%=event.id%>">¥<%= event.price %></a>
+    </div>
+    <%= event.text%>
+  <% end %>
+<% end %>
+<% @bookings.each do |t|%>
+<%= t.price%>
+<%= t.text%>
+<%= t.start_time.strftime('%Y/%m/%d')%>
+<%end%>

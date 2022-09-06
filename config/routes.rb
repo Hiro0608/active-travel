@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :admins
   root to: 'items#index'
-  resources :items do
-    collection do
-      get 'information'
-    end
+
+  resources :users do
+  resources :bookings
   end
 end
