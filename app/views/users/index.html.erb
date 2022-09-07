@@ -1,7 +1,1 @@
-<% @users.each do |user|%>
- <%= link_to  user_path(user.id) do%>
-<%= image_tag(user.image.variant(resize: '300x300'))%>
-<%= user.name%>様
-<%= user.birthday%>
-<%end%>
-<%end%>
+<%= render "users/user"%>

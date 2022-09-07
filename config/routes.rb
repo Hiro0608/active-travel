@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :admins
   root to: 'items#index'
-  resources :items do
+
+    resources :users do
+    resources :bookings
+
     collection do
-      get 'information'
+      get 'search'
     end
   end
 end

@@ -1,0 +1,12 @@
+<%= month_calendar events:@bookings  do |date, events| %>
+  <%= date.day %>
+  <% events.each do |event| %>
+    <div class="booking-price-image">
+    <a href="/users/<%=@user.id%>/bookings/<%=event.id%>">¥<%= event.price %></a>
+    <% if event.text.present?%>
+    <a href="/users/<%=@user.id%>/bookings/<%=event.id%>"><%=image_tag("file" ,class:"booking-image") %></a>
+    </div>
+    <%end%>
+  <% end %>
+<% end %>
+</div>
