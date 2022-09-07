@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
   def index
     @admin = current_admin
     @now = Date.today.month
-    @booking = Booking.all.order(start_time: :DESC)
   end
 
   def information
