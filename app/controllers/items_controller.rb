@@ -1,8 +1,10 @@
 class ItemsController < ApplicationController
   def index
-    @admin = current_admin
-    @now = Date.today.month
-    @booking = Booking.all.order(start_time: :DESC)
+    @items = Item.all.order("created_at DESC")
+  end
+
+  def new 
+    @item = Item.new
   end
 
   def information
