@@ -24,7 +24,7 @@ header {
   height: 100px;
 }
 
-.heading {
+.title-contents {
   width: 90%;
   margin-left: 50px;
   display: flex;
@@ -36,8 +36,41 @@ li {
 }
 
 /* メイン */
-.card-img-top {
-  width: 100%;
+.card-img-top-left {
+  width: 24.25vw;
+  background-image: image-url('glampimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-img-top-center {
+  width: 24.25vw;
+  background-image: image-url('fishing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-img-top-right {
+  width: 24.25vw;
+  background-image: image-url('mountainclimbing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 15vw;
   object-fit: cover;
 }

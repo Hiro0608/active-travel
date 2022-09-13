@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  devise_for :admins
-  root to: 'items#index'
-
-    resources :users do
-    resources :bookings
-
-    collection do
-      get 'search'
-    end
+  root to: "items#index"
+  resources :items do
+  resources :images do
+    resources :orders, only: [:index, :create]
   end
+end
 end

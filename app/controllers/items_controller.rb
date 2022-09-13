@@ -1,7 +1,10 @@
 class ItemsController < ApplicationController
   def index
-    @admin = current_admin
-    @now = Date.today.month
+    @items = Item.all.order("created_at DESC")
+  end
+
+  def new 
+    @item = Item.new
   end
 
   def information
