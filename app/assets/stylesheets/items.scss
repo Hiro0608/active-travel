@@ -2,7 +2,84 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-a {
-  text-decoration: none;
-  color: black;
+/* ヘッダー */
+body {
+  font-size: 16px;
+  color: #333;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 20px 20;
+  margin: 0;
+}
+
+ul,li {
+  font-size: 23px;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 100px;
+}
+
+.title-contents {
+  width: 90%;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+/* メイン */
+.card-img-top-left {
+  width: 24.25vw;
+  background-image: image-url('glampimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-img-top-center {
+  width: 24.25vw;
+  background-image: image-url('fishing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-img-top-right {
+  width: 24.25vw;
+  background-image: image-url('mountainclimbing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  object-fit: cover;
+}
+
+
+/* フッター */
+footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }
